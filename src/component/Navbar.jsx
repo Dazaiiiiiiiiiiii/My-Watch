@@ -9,7 +9,16 @@ function Navbar() {
       </div>
       <div className="navbar-links">
         <Link className="navbar-link" to="/">
-          Home
+          Movies
+        </Link>
+        <Link className="navbar-link" to="/tvshow">
+          Tv-Shows
+        </Link>
+        <Link className="navbar-link" to="/upcoming">
+          Upcoming
+        </Link>
+        <Link className="navbar-link" to="/toprated">
+          Top-Rated
         </Link>
         <Link className="navbar-link" to="/favorites">
           Favorites

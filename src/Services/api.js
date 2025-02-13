@@ -16,3 +16,33 @@ export const searchMovies = async (query) => {
   const data = await response.json();
   return data.results;
 };
+
+export const getTopRatedMovies = async () => {
+  const response = await fetch(
+    `${BASE_URL}/movie/top_rated?api_key=${API_KEY}`
+  );
+  const data = await response.json();
+  return data.results;
+};
+
+export const getUpcoming = async () => {
+  const response = await fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}`);
+  const data = await response.json();
+  return data.results;
+};
+
+export const getTvShows = async () => {
+  const response = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}`);
+  const data = await response.json();
+  return data.results;
+};
+
+export const searchTvShows = async (query) => {
+  const response = await fetch(
+    `${BASE_URL}/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(
+      query
+    )}`
+  );
+  const data = await response.json();
+  return data.results;
+};

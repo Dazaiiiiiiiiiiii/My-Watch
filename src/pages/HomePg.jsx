@@ -58,6 +58,8 @@ function HomePg() {
         </button>
       </form>
 
+      <h2>Movies</h2>
+
       {error && <div className="error-message">{error}</div>}
 
       {loading ? (
